@@ -1,0 +1,15 @@
+.sidebar{
+  position: fixed;
+  left:80vw;
+  width: 20vw;
+  height: 93vh;
+  top: 64px;
+}
+
+.active-section{
+  padding: 6px;
+}
+
+.quest-section{
+  padding: 6px;
+}

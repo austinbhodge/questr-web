@@ -1,0 +1,17 @@
+<div class="sidebar">
+<md-tab-group>
+  <md-tab class="sidebar-tab" label="All Quests">
+    <div class="quest-section">
+      <div *ngFor="let quest of quests">
+        <questCard [quest]="quest"></questCard>
+        <hr>
+      </div>
+    </div>
+  </md-tab>
+  <md-tab label="Active Quests">
+    <div class="active-section">
+
+    </div>
+  </md-tab>
+</md-tab-group>
+</div>

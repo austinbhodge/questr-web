@@ -1,0 +1,25 @@
+
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<md-toolbar color="primary">
+  <span>Questr</span>
+  <span class="example-fill-remaining-space"></span>
+  <span>
+    <button class="toolbar-button" md-mini-fab md-tooltip="Login" (click)="openLogin()">
+      <md-icon class="md-24" style="color:black;">account_circle</md-icon>
+    </button>
+  </span>
+  <span>
+    <button class="toolbar-button" md-mini-fab md-tooltip="Register" (click)="openRegister()">
+      <md-icon class="md-24" style="color:black;">person_add</md-icon>
+    </button>
+  </span>
+</md-toolbar>
+<questr-map></questr-map>
+<questr-sidebar></questr-sidebar>
+<div class="add-quest">
+  <button class="toolbar-button" md-fab md-tooltip="Add Quest" (click)="openNewQuest()">
+    <md-icon class="md-24" style="color:black;">create</md-icon>
+  </button>
+</div>

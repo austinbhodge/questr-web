@@ -12,21 +12,21 @@ import { MaterialModule, MdIconRegistry } from '@angular/material';
 import { AppComponent } from './app.component';
 import { LoginDialog,
          RegisterDialog,
-         QuestDialog,
          Sidebar,
-         QuestCard,
-         QuestMap} from './components';
+         PlaceCard,
+         VbMap} from './components';
+
+import { PointsOfInterestService } from './services';
 
 @NgModule({
-  entryComponents: [LoginDialog, RegisterDialog, QuestDialog],
+  entryComponents: [LoginDialog, RegisterDialog],
   declarations: [
     AppComponent,
     LoginDialog,
     RegisterDialog,
-    QuestDialog,
     Sidebar,
-    QuestCard,
-    QuestMap
+    PlaceCard,
+    VbMap
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { LoginDialog,
     }),
     MaterialModule.forRoot()
   ],
-  providers: [MdIconRegistry],
+  providers: [MdIconRegistry, PointsOfInterestService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

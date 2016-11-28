@@ -1,10 +1,10 @@
-import { QuestrWebPage } from './app.po';
+import { vbWebPage } from './app.po';
 
-describe('questr-web App', function() {
-  let page: QuestrWebPage;
+describe('vb-web App', function() {
+  let page: vbWebPage;
 
   beforeEach(() => {
-    page = new QuestrWebPage();
+    page = new vbWebPage();
   });
 
   it('should display message saying app works', () => {

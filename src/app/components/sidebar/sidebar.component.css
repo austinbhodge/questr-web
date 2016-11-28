@@ -4,12 +4,17 @@
   width: 20vw;
   height: 93vh;
   top: 64px;
+  overflow-y: scroll;
 }
 
 .active-section{
   padding: 6px;
 }
 
-.quest-section{
+.vb-section{
   padding: 6px;
+}
+
+.icon-tab{
+  min-width: 50px !important;
 }

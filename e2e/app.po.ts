@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class QuestrWebPage {
+export class vbWebPage {
   navigateTo() {
     return browser.get('/');
   }

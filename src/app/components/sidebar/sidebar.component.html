@@ -1,17 +1,35 @@
 <div class="sidebar">
-<md-tab-group>
-  <md-tab class="sidebar-tab" label="All Quests">
-    <div class="quest-section">
-      <div *ngFor="let quest of quests">
-        <questCard [quest]="quest"></questCard>
-        <hr>
-      </div>
-    </div>
-  </md-tab>
-  <md-tab label="Active Quests">
-    <div class="active-section">
+  <button md-raised-button [md-menu-trigger-for]="menu" color="accent" style="width:95%; margin:2.5%;">
+    <md-icon>place</md-icon>
+  </button>
+  <md-menu x-position="before" y-position="below" #menu="mdMenu">
+    <button md-menu-item disabled>
+      <md-icon> nature_people </md-icon>
+      <span> Parks </span>
+    </button>
+    <button md-menu-item>
+      <md-icon> local_library </md-icon>
+      <span> Libraries</span>
+    </button>
+    <button md-menu-item>
+      <md-icon> directions_bike </md-icon>
+      <span> Recreation </span>
+    </button>
+    <button md-menu-item>
+      <md-icon> golf_course </md-icon>
+      <span> Golf Courses </span>
+    </button>
+    <button md-menu-item>
+      <md-icon> local_see </md-icon>
+      <span> Museums </span>
+    </button>
+    <button md-menu-item>
+      <md-icon> school </md-icon>
+      <span> Schools </span>
+    </button>
+  </md-menu>
 
-    </div>
-  </md-tab>
-</md-tab-group>
+  <div *ngFor="let place of places">
+    <placeCard [place]="place"></placeCard>
+  </div>
 </div>

@@ -3,7 +3,10 @@ import { Component, Optional } from '@angular/core';
 import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 
 //Dialog Menus
-import { LoginDialog, RegisterDialog, QuestDialog} from './components';
+import { LoginDialog, RegisterDialog} from './components';
+
+//services
+import { PointsOfInterestService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +14,15 @@ import { LoginDialog, RegisterDialog, QuestDialog} from './components';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _dialog: MdDialog, private _snackbar: MdSnackBar) {}
+  currentlyViewing : any;
+  constructor(private _dialog: MdDialog, private _snackbar: MdSnackBar, public poi: PointsOfInterestService) {}
+
+  ngOnInit(){
+    this.poi.getParks().subscribe(
+      parks => {this.currentlyViewing = parks.features; console.log(parks)},
+      error => {console.log(error)}
+    )
+  }
 
   openLogin() {
       let dialogRef = this._dialog.open(LoginDialog);
@@ -27,14 +38,7 @@ export class AppComponent {
       })
     }
 
-  openNewQuest() {
-      let dialogRef = this._dialog.open(QuestDialog);
-      dialogRef.afterClosed().subscribe(result => {
-        console.log(result)
-      })
-    }
-
     showSnackbar() {
-      this._snackbar.open('Quest Accepted!', 'See Who');
+      this._snackbar.open('vb Accepted!', 'See Who');
     }
 }

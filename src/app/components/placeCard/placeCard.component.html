@@ -1,0 +1,12 @@
+<md-card>
+   <md-card-title style="margin-bottom:6px; font-size:22px;">{{place.properties.NAME}}</md-card-title>
+   <md-card-subtitle>{{place.properties.SUB_CATEGORY}}</md-card-subtitle>
+   <md-card-content>
+        <p>{{place.properties.ADDRESS}}</p>
+   </md-card-content>
+   <md-card-actions>
+     <button md-raised-button color="primary" md-tooltip="On Map">Location</button>
+     <button md-raised-button color="accent" md-tooltip="Website" [disabled]="hasWebsite()" style="float:right;">Website</button>
+     <hr>
+   </md-card-actions>
+</md-card>

@@ -10,4 +10,7 @@ import { Component, Input } from '@angular/core';
 export class Sidebar {
   @Input() places;
 
+  activate(type){
+    console.log(type);
+  }
 }

@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 
 export class VbMap {
   @Input() mapMarkers;
-  lat: number = 36.826;
+  lat: number = 36.736;
   lng: number = -76.164;
-  zoom: number = 10;
+  zoom: number = 11;
 }

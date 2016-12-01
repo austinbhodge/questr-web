@@ -1,6 +1,11 @@
 
 <sebm-google-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom">
   <div *ngFor="let marker of mapMarkers">
-    <sebm-google-map-marker [latitude]="marker.properties.LATI" [longitude]="marker.properties.LONG_"></sebm-google-map-marker>
+    <sebm-google-map-marker [latitude]="marker.properties.LATI" [longitude]="marker.properties.LONG_">
+      <sebm-google-map-info-window [disableAutoPan]="true">
+         <h3 style="margin-bottom:2px">{{marker.properties.NAME}}</h3>
+         <h5 style="margin-top:2px">{{marker.properties.SUB_CATEGORY}}</h5>
+       </sebm-google-map-info-window>
+    </sebm-google-map-marker>
   </div>
 </sebm-google-map>
